@@ -5,16 +5,34 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #1c3d5a; /* Deep Academic Blue */
+    --secondary-color: #3182ce; /* Vibrant Educational Blue */
+    --accent-color: #e53e3e; /* Professional Red Accent */
+    --text-color: #2d3748; /* Slate Gray for high readability */
+    --bg-color: #f7fafc; /* Crisp, off-white background */
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 /* Container */
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1100px;
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
@@ -22,156 +40,200 @@ body {
 
 /* Header & Nav */
 header {
-    background: #2c3e50;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 25px 0;
+    border-bottom: 4px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
 }
 
 header nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 header nav ul {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 header nav li {
     float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 15px;
 }
 
 header nav a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #e8491d;
-    font-weight: bold;
+    color: var(--secondary-color);
 }
 
 /* Main Content */
 main {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 section {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: var(--white);
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+    border: 1px solid var(--border-color);
 }
 
 section h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #e8491d;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
 section h3 {
-    color: #e8491d;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 1.4rem;
 }
 
 section h4 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-    margin-top: 15px;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
+    margin-bottom: 25px;
+    padding-left: 25px;
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Specific elements */
 .project-card {
-    background: #ecf0f1;
-    padding: 20px;
-    border-radius: 5px;
-    border-left: 4px solid #3498db;
-    margin-top: 20px;
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    margin-top: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+    margin-top: 0;
 }
 
 .btn {
     display: inline-block;
-    background: #e8491d;
-    color: #fff;
-    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #c0392b;
+    background: var(--secondary-color);
 }
 
 .lesson-header {
-    background: #34495e;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px;
+    border: none;
 }
 
 .lesson-header h2 {
-    color: white;
-    border-bottom: 2px solid #e8491d;
+    color: var(--white);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 20px;
+}
+
+.lesson-header p {
+    color: #e2e8f0;
+    margin-bottom: 10px;
 }
 
 .step {
-    background: #fdfbfb;
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 4px solid #27ae60;
-    margin-bottom: 15px;
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--secondary-color);
 }
 
 /* Footer */
 footer {
-    background: #2c3e50;
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--white);
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
 }
 
 /* Media Queries for Responsiveness */
 @media(max-width: 768px) {
-    header h1,
-    header nav,
-    header nav li {
+    header h1 {
         float: none;
         text-align: center;
-        width: 100%;
+        margin-bottom: 15px;
     }
 
-    header {
-        padding-bottom: 20px;
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav li {
+        float: none;
+        display: inline-block;
+        padding: 5px 15px;
     }
 
     .container {
         width: 95%;
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 25px;
     }
 }
