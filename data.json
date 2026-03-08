@@ -1,0 +1,25 @@
+{
+    "name": "My Portfolio",
+    "icon": "🎓",
+
+    "pages": [
+        {
+            "icon": "👋",
+            "name": "About Me",
+            "link": "/about",
+            "content": "content/about.md"
+        },
+        {
+            "icon": "📂",
+            "name": "Portfolio & Projects",
+            "link": "/portfolio",
+            "content": "content/portfolio.md"
+        },
+        {
+            "icon": "📖",
+            "name": "Lesson Plan: Myths & Legends",
+            "link": "/lesson-plan",
+            "content": "content/lesson-plan.md"
+        }
+    ]
+}
